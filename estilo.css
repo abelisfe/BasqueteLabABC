@@ -1,0 +1,368 @@
+/* ============================================================
+   1. ESTILOS GLOBAIS (BODY, TEXTO, IMAGENS, ESTRUTURA)
+   ============================================================ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    h1 { font-size: 2.4rem; }
+}
+
+section h2 {
+    font-weight: 700;
+}
+
+/* Cartões (usados no index e noutros sítios) */
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.ia-label {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+.navbar {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+}
+
+.navbar .nav-link {
+    font-size: 1.15rem !important;
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff !important; /* branco ao passar o rato */
+}
+
+.section-alt {
+    background-color: #fff8f0; /* laranja muito suave */
+}
+
+/* ============================================================
+   2. INDEX (se houver estilos específicos, ficam aqui)
+   ============================================================ */
+/* (No momento não há estilos exclusivos do index) */
+
+.text-block-left {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* ============================================================
+   3. PROJETO (caso venham a existir estilos específicos)
+   ============================================================ */
+
+
+
+/* ============================================================
+   4. PARCEIROS (JumpLab, Above the Rim, SportsTech)
+   ============================================================ */
+
+.section-title {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.feature-box {
+    transition: 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.15);
+}
+
+.header-logo {
+    transition: 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.03);
+}
+
+
+
+/* ============================================================
+   5. JOGOS – CALENDÁRIO, CORES, CAIXAS, LEGENDA
+   ============================================================ */
+
+/* Legenda */
+.leg-upcoming,
+.leg-win,
+.leg-loss {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/* Cores normais */
+.leg-upcoming { background: #ff9800; }
+.leg-win      { background: #4CAF50; }
+.leg-loss     { background: #F44336; }
+
+/* Tabela do calendário */
+.calendar-table {
+    table-layout: fixed;
+}
+
+.calendar-table td {
+    height: 120px;
+    vertical-align: top;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.calendar-table th {
+    text-align: center;
+}
+
+/* Número do dia */
+.numero-dia {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* Caixas de jogo */
+.game-box {
+    background: #ff9800;
+    color: #fff;
+    padding: 4px;
+    margin-top: 4px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.game-win {
+    background: #4CAF50;
+    color: #fff;
+    padding: 4px;
+    margin-top: 4px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.game-loss {
+    background: #F44336;
+    color: #fff;
+    padding: 4px;
+    margin-top: 4px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+
+/* ============================================================
+   6. JOGO JOGADO – ESTATÍSTICAS
+   ============================================================ */
+
+.stat-box {
+    padding: 15px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+/* ============================================================
+   7. ACESSIBILIDADE – BOTÃO E PAINEL
+   ============================================================ */
+
+/* Botão flutuante */
+#accessibility-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #004aad;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 9999;
+    transition: 0.3s;
+}
+#accessibility-btn:hover {
+    background: #002f6c;
+}
+
+/* Painel */
+#accessibility-panel {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 230px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    z-index: 9999;
+}
+#accessibility-panel button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    background: #004aad;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#accessibility-panel button:hover {
+    background: #003776;
+}
+
+
+
+/* ============================================================
+   8. ALTO CONTRASTE – NOVO SISTEMA
+   ============================================================ */
+
+body.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Áreas principais */
+body.high-contrast main,
+body.high-contrast header,
+body.high-contrast section,
+body.high-contrast footer,
+body.high-contrast nav {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Navbar e footer */
+body.high-contrast .navbar {
+    background-color: #000;
+    border-bottom: 1px solid #fff;
+}
+body.high-contrast footer {
+    border-top: 1px solid #fff;
+}
+
+/* Cartões e caixas neutras */
+body.high-contrast .card,
+body.high-contrast .stat-box,
+body.high-contrast .p-3,
+body.high-contrast .p-4 {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* Tabela do calendário */
+body.high-contrast .calendar-table td,
+body.high-contrast .calendar-table th {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Links */
+body.high-contrast a {
+    color: #00c5d3;
+}
+
+/* Painel de acessibilidade */
+body.high-contrast #accessibility-panel {
+    background-color: #111;
+    border: 1px solid #fff;
+}
+
+
+
+/* ============================================================
+   9. ALTO CONTRASTE – CORREÇÕES DAS CORES DOS JOGOS
+   ============================================================ */
+
+/* Vitória */
+.high-contrast .game-win {
+    background-color: #28a745 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+/* Derrota */
+.high-contrast .game-loss {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+/* Jogos futuros */
+.high-contrast .game-box {
+    background-color: #ff9800 !important;
+    color: #000 !important;
+    border: 2px solid #fff !important;
+}
+
+.high-contrast .leg-upcoming {
+    background: #ff9800 !important;
+    border: 2px solid #fff !important;
+}
+.high-contrast .leg-win {
+    background: #4CAF50 !important;
+    border: 2px solid #fff !important;
+}
+.high-contrast .leg-loss {
+    background: #F44336 !important;
+    border: 2px solid #fff !important;
+}
+
+
+
+/* ============================================================
+   10. CORREÇÕES FINAL DE FUNDO E TEXTO EM ALTO CONTRASTE
+   ============================================================ */
+
+body.high-contrast .bg-light,
+body.high-contrast .bg-white,
+body.high-contrast .shadow,
+body.high-contrast .rounded {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+body.high-contrast header,
+body.high-contrast header * {
+    color: #fff !important;
+    text-shadow: none !important;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast p,
+body.high-contrast span {
+    color: #fff !important;
+}

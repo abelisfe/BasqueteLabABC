@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogos - BasqueteLabABC</title>
+    <base href="/BasqueteLabABC/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        crossorigin="anonymous"
+    >
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">BasqueteLabABC</a>
+
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#menuPrincipal">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="projeto.html">Projeto</a></li>
+                <li class="nav-item"><a class="nav-link" href="parceiros.html">Parceiros</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="jogos.html">Jogos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Botão de Acessibilidade -->
+<div id="accessibility-btn">Acessibilidade</div>
+
+<!-- Painel de Acessibilidade -->
+<div id="accessibility-panel" class="shadow">
+    <h5>Opções de Acessibilidade</h5>
+
+    <button onclick="toggleContrast()">Alto Contraste</button>
+    <button onclick="increaseFont()">Aumentar Texto</button>
+    <button onclick="decreaseFont()">Diminuir Texto</button>
+    <button onclick="resetAccessibility()">Repor Definições</button>
+</div>
+
+
+
+<main>
+
+    <!-- TÍTULO -->
+    <section class="py-5 section-alt">
+        <div class="container">
+            <h1 class="text-center fw-bold mb-3">Calendário de Jogos — ABC</h1>
+            <p class="lead text-center mb-4">
+                Calendário oficial dos jogos da equipa no mês de <strong>Dezembro 2025</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- CALENDÁRIO -->
+    <section class="py-4 section-alt">
+        <div class="container">
+
+            <h2 class="text-center mb-4">Dezembro 2025</h2>
+            <div class="row mb-4">
+    <div class="col-md-8"></div>
+
+    <div class="col-md-4">
+    <div class="p-3 border rounded bg-light">
+        <h5 class="mb-3">Legenda</h5>
+
+        <div class="d-flex align-items-center mb-2">
+            <div class="leg-upcoming"></div>
+            <span>Jogo por disputar</span>
+        </div>
+
+        <div class="d-flex align-items-center mb-2">
+            <div class="leg-win"></div>
+            <span>Vitória</span>
+        </div>
+
+        <div class="d-flex align-items-center">
+            <div class="leg-loss"></div>
+            <span>Derrota</span>
+        </div>
+
+    </div>
+</div>
+
+</div>
+            <table class="table calendar-table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- Linha 1 (1 a 6) -->
+                    <tr>
+                        <td></td> <!-- Domingo vazio -->
+                        <td><div class="numero-dia">1</div></td>
+                        <td><div class="numero-dia">2</div></td>
+                        <td>
+                            <div class="numero-dia">3</div>
+                            <!-- Vitória a verde -->
+                            <a href="jogojogado.html?id=3" class="game-win d-block text-decoration-none">V 19:00<br>ABC 82 - 74 Touros </a>
+                        </td>
+                        <td><div class="numero-dia">4</div></td>
+                        <td><div class="numero-dia">5</div></td>
+                        <td><div class="numero-dia">6</div></td>
+                    </tr>
+
+                    <!-- Linha 2 (7 a 13) -->
+                    <tr>
+                        <td>
+                            <div class="numero-dia">7</div>
+                            <!-- Derrota a vermelho -->
+                            <a href="jogojogado.html?id=7" class="game-loss d-block text-decoration-none">D 18:00<br>ABC 69 - 77 Pedras </a>
+                        </td>
+                        <td><div class="numero-dia">8</div></td>
+                        <td>
+                            <div class="numero-dia">9</div>
+                            <a href="jogojogado.html?id=9" class="game-win d-block text-decoration-none">V 16:30<br>Saltitões vs ABC </a> 
+                        </td>
+                        <td><div class="numero-dia">10</div></td>
+                        <td><div class="numero-dia">11</div></td>
+                        <td>
+                            <div class="numero-dia">12</div>
+                            <div class="game-box"><a href="jogojogado.html?id=12" class="text-white text-decoration-none">21:00<br>ABC vs Porto Lions</a></div>
+                        </td>
+                        <td><div class="numero-dia">13</div></td>
+                    </tr>
+
+                    <!-- Linha 3 (14 a 20) -->
+                    <tr>
+                        <td><div class="numero-dia">14</div></td>
+                        <td>
+                            <div class="numero-dia">15</div>
+                            <!-- Jogo futuro a laranja -->
+                            <div class="game-box"><a href="jogojogado.html?id=15" class="text-white text-decoration-none">14:40<br>ABC vs Falcons</a></div>
+                        </td>
+                        <td><div class="numero-dia">16</div></td>
+                        <td><div class="numero-dia">17</div></td>
+                        <td><div class="numero-dia">18</div></td>
+                        <td><div class="numero-dia">19</div></td>
+                        <td><div class="numero-dia">20</div></td>
+                    </tr>
+
+                    <!-- Linha 4 (21 a 27) -->
+                    <tr>
+                        <td>
+                            <div class="numero-dia">21</div>
+                            <div class="game-box"><a href="jogojogado.html?id=21" class="text-white text-decoration-none">19:30<br>Porto Lions vs ABC</a></div>
+                        </td>
+                        <td><div class="numero-dia">22</div></td>
+                        <td><div class="numero-dia">23</div></td>
+                        <td><div class="numero-dia">24</div></td>
+                        <td><div class="numero-dia">25</div></td>
+                        <td><div class="numero-dia">26</div></td>
+                        <td>
+                            <div class="numero-dia">27</div>
+                            <div class="game-box"><a href="jogojogado.html?id=27" class="text-white text-decoration-none">19:15<br>ABC vs Saltitões</a></div>
+                        </td>
+                    </tr>
+
+                    <!-- Linha 5 (28 a 31) -->
+                    <tr>
+                        <td><div class="numero-dia">28</div></td>
+                        <td><div class="numero-dia">29</div></td>
+                        <td><div class="numero-dia">30</div></td>
+                        <td>
+                            <div class="numero-dia">31</div>
+                            <div class="game-box"><a href="jogojogado.html?id=31" class="text-white text-decoration-none">20:00<br>Águias vs ABC</a></div>
+                        </td>
+
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Script.js"></script>
+</body>
+</html>
